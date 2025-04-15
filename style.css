@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+/* Basic Styling */
+
+html, body{
+    font-family: "Inter", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: "Inter", sans-serif;
+    margin: 20px;
+    padding: 0;
+}
+
+.text-container {
+    max-width:100ch;
+}
+
+
+.text{
+    margin: 20px;
+}
+
+
+/* Map Styling */
+#lnos-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+svg {
+    width: 80vw; /* 90% of the viewport width */
+    height: 45vw; /* Adjust height proportionally */
+  }
+
+
+
+
+
+/* Animation Styling */
