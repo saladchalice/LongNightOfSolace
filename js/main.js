@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 async function createChoropleth(data) {
     var margin = {top: 0, right: 0, bottom: 0, left: 0},
-    width = window.innerWidth * .8,
+    width = window.innerWidth * .7,
     height = width/2;
 
     // Rollup necessary data
@@ -60,15 +60,20 @@ async function createChoropleth(data) {
 
     // Mouseover function
     const mouseover = function(event, d) {
-        d3.select(this)
-            .style("stroke", "black");
+        d3.selectAll(".country")
+        .style("opacity", 0.75);  // Fade out all
 
-        const countryData = countryStats.get(d.properties.name);
+        d3.select(this)
+        .style("stroke-width", .6)
+        .style("stroke", "black")
+        .style("opacity", 1);
+
+        const countryData = countryStats.get(d.properties.ADMIN);
         
         if (countryData) {
             tooltip.html(`
                 <div style="font-weight: bold; color: ${colorScale(countryData.count)}; margin-bottom: 5px">
-                    ${d.properties.name}
+                    ${d.properties.ADMIN}
                 </div>
                 <div style="color: #666">
                     Songs Count: <span style="color: #333; font-weight: 600;">${countryData.count}</span>
@@ -85,7 +90,7 @@ async function createChoropleth(data) {
             .style("top", Math.max(event.pageY - 10, 10) + "px");
         } else {
             tooltip.html(`
-                <div style="font-weight: bold; margin-bottom: 5px">${d.properties.name}</div>
+                <div style="font-weight: bold; margin-bottom: 5px">${d.properties.ADMIN}</div>
                 <div style="color: #666">No songs recorded</div>
             `)
             .style("opacity", 1)
@@ -97,6 +102,13 @@ async function createChoropleth(data) {
     // Mouseleave function
     const mouseleave = function(event, d) {
         tooltip.style("opacity", 0);
+
+        // Reset opacity for all countries
+        d3.selectAll(".country")
+        .style("opacity", 1)
+        .style("stroke", "#282828")
+        .style("stroke-width", .2);
+        
         d3.select(this)
             .style("stroke", "black");
     };
@@ -121,8 +133,7 @@ async function createChoropleth(data) {
 
     // Define Projection
     const projection = d3.geoNaturalEarth1()
-        .scale(200)
-        .translate([width / 2, height / 2]);
+    .fitExtent([[0, 0], [width, height]], world);
 
     const path = d3.geoPath().projection(projection);
 
@@ -144,13 +155,13 @@ async function createChoropleth(data) {
         .join('path')
         .attr('d', path)
         .attr('fill', d => {
-            const countryName = d.properties.name;
+            const countryName = d.properties.ADMIN;
             // If the country has data, color it using the colorScale, otherwise set it to white.
             return countryStats.has(countryName) ? colorScale(countryStats.get(countryName).count) : '#fff'; 
         })
-        .attr('stroke', '#000')  // Set the country borders to black
-        .attr('stroke-width', 0.1)
-        .attr('class', d => d.properties.name === "Lakes" ? "lakes" : "")  // Add a class for lakes
+        .attr('stroke', '#282828')  // Set the country borders to black
+        .attr('stroke-width', 0.2)
+        .attr('class', 'country')
         .on("mouseover", mouseover)
         .on("mouseleave", mouseleave);
 

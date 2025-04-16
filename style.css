@@ -34,8 +34,20 @@ h1, h2, h3, h4, h5, h6{
     justify-content: center;
 }
 
+.hover{
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+}
+
+.country:hover ~ .country,
+.country:not(:hover) {
+    opacity: 0.5;  /* Fade out non-hovered options */
+}
+
+
 svg {
-    width: 80vw; /* 90% of the viewport width */
+    width: 70vw; /* 90% of the viewport width */
     height: 45vw; /* Adjust height proportionally */
   }
 
