@@ -1,8 +1,8 @@
 let data = [];
-//geojson merge
-import geojsonMerge from 'C:\Users\Eddie\node_modules\@mapbox\geojson-merge';
 
-//import geojson data
+
+// Import the GeoJSON merge function
+// const { merge } = require('@mapbox/geojson-merge');
 
 // load data-----------------------------------------------------------------------------------------
 async function loadData() {
@@ -101,8 +101,10 @@ async function createChoropleth(data) {
             .style("stroke", "black");
     };
 
-    // Load GeoJSON map data
-    const world = await d3.json('https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/world.geojson');
+    // // Load GeoJSON map data
+    // const world = await d3.json('https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/world.geojson');
+    // Load GeoJSON from your local file
+    const world = await d3.json('lib/countries.geojson');
 
     const zoom = d3.zoom()
         .scaleExtent([1, 8])
