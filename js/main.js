@@ -72,7 +72,8 @@ async function createChoropleth(data) {
         d3.select(this)
         .style("stroke-width", .6)
         .style("stroke", "black")
-        .style("opacity", 1);
+        .style("opacity", 1)
+        .classed('hover', true); // Add hover class
 
         const countryData = countryStats.get(d.properties.ADMIN);
         
@@ -116,7 +117,8 @@ async function createChoropleth(data) {
         .style("stroke-width", .2);
         
         d3.select(this)
-            .style("stroke", "black");
+            .style("stroke", "black")
+            .classed('hover', false);
     };
 
     // // Load GeoJSON map data
