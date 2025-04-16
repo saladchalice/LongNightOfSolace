@@ -26,8 +26,8 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 async function createChoropleth(data) {
     var margin = {top: 0, right: 0, bottom: 0, left: 0},
-    width = window.innerWidth * .7,
-    height = width/2;
+    width = window.innerWidth * .8,
+    height = window.innerHeight;
 
     // Rollup necessary data
     const countryStats = d3.rollup(
@@ -119,7 +119,7 @@ async function createChoropleth(data) {
     const world = await d3.json('lib/countries.geojson');
 
     const zoom = d3.zoom()
-        .scaleExtent([1, 8])
+        .scaleExtent([1.25, 8])
         .translateExtent([[0, 0], [width, height]])
         .on('zoom', zoomed);
 
@@ -131,6 +131,7 @@ async function createChoropleth(data) {
         .attr('class', 'lnos-chart');
 
 
+        
     // Define Projection
     const projection = d3.geoNaturalEarth1()
     .fitExtent([[0, 0], [width, height]], world);
@@ -165,10 +166,16 @@ async function createChoropleth(data) {
         .on("mouseover", mouseover)
         .on("mouseleave", mouseleave);
 
-    // To color lakes black, you can add additional styling for lakes in the CSS or modify directly in the code.
-    d3.selectAll(".lakes")
-        .style("fill", "black");
+    // Apply default zoom transform (1.25x and centered)
+    const defaultScale = 1.25;
+    const tx = width / 2;
+    const ty = height / 2;
 
+    svg.call(zoom.transform, d3.zoomIdentity
+        .translate(tx, ty)
+        .scale(defaultScale)
+        .translate(-width / 2, -height / 2));
+        
     // Zoom function that applies the zoom transformations
     function zoomed(event) {
         g.attr('transform', event.transform);  // Apply zoom to the group

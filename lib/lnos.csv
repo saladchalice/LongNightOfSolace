@@ -1,4 +1,5 @@
 country,genre,song name,artist,rating
+antarctica,indie rock,how many people,nunatuk,6.5
 argentina,indie rock,bichos,homogenica,7
 argentina,indie rock,turista,homogenica,8
 argentina,indie rock,animales,homogenica,8
@@ -34,17 +35,19 @@ canada,alt rock,pate filo,malajube,8
 canada,experimental rock,fleur de londres,violett pi,7
 canada,alt rock,la monogamie,malajube,8
 canada,indie rock,annie (pourquoi t'es partie?),babylones,8
-cape verde,indie rock,sinti alive,krad,6.9
+cabo verde,indie rock,sinti alive,krad,6.9
 chile,math rock,resonancias,herbario,7
 chile,rock,el viaje,coni lewin,7.5
 china,alternative,光,arches,7
 china,shoegaze,i just want 2 hear your voice...,strawberry lust,7
 colombia,emo,become,the hall effect,7
 croatia,psychedelic rock,meke ruke,cuvarkuca,7
-czech republic,experimental rock,sign n spell,here,7
+czechia,experimental rock,sign n spell,here,7
 cuba,shoegaze,no te veo,land whales,8.7
 denmark,alt rock,fencesitters,inventory,7
+england,indie rock,prunus,new luna,7.5
 ecuador,alt rock,sindrome de uppsala,biorn borg,8
+england,shoegaze,prunus,new luna,8.8
 egypt,alt rock,segn bel alwan,"ramy essam, malikah",8
 el salvador,indie rock,color,inflorescencia,6.7
 faroe islands,alt rock,indigo brow,clickhaze,10
@@ -61,10 +64,11 @@ germany,indie rock,angst,betterov,7.5
 germany,alternative,revolter,125 rue montmartre,8
 germany,alternative,gegenstück,monochrome,8.8
 germany,alternative,hands and arrows,sometree,8.5
-ghana,rock,try,dark suburb,5
+ghana,rock,try,dark suburb,6
 greece,pop rock (?) ,the big deal,tripwire,7
 greenland,folk rock,inuinnaagavit,nanook,7
-guam,noise rock,laneswitchin',83books,7
+guam,noise rock,words cannot express,matala,7
+guatemala,indie rock,guatemala esta muerta,volver,7.5
 hungary,alt rock,ha az eletben,kispal es a borz,7.6
 hungary,indie rock,daddy said no,carson coma,7.5
 iceland,alt rock,fardu i roo,botnledja,7.5
@@ -98,6 +102,7 @@ latvia,experimental rock,pulkstens,mazi smirdigie kocini,7
 latvia,alt rock,fabrikas meitenes dziesma,zidruns,5
 latvia,dream pop,i want you,tribes of the city,7
 lebanon,dream pop,dead end,postcards,6
+lebanon,dream pop,colorblind,postcards,7
 luxembourg,alt rock,6th of august,holy national victims,6.5
 malaysia,alt rock,bintang,statik,8.9
 malaysia,alt rock,gelap,statik,8.5
@@ -121,7 +126,7 @@ netherlands,indie rock,misery galore,bettie serveert,9
 netherlands,indie rock,fallen foster,bettie serveert,9.5
 netherlands,indie rock,rudder,bettie serveert,9
 netherlands,indie rock,geek,bettie serveert,8.6
-macedonia,alt rock,peski nakaj doma,Дивоградба (divogradka),9
+north macedonia,alt rock,peski nakaj doma,Дивоградба (divogradka),9
 nigeria,rock,amin,clayrocksu,6.7
 nigeria,rock,oge,clayrocksu,7
 norway,indie rock,pie in the sky,drape,7.5
@@ -137,8 +142,9 @@ portugal,dark wave rock,pale,aenima,8
 russia,alt rock,untitled,franco,8.3
 russia,math rock,Погребок ,franco,8.3
 saudi arabia,experimental rock,يش سويت,ana.n7n,6
-saudi arabia,indie rock,this is not me,the accolade,7
-serbia,indie rock,svet se menja,proto tip,6
+saudi arabia,alt rock,mouj al bahar,seera,7
+scotland,shoegaze,bliss,dallas love field,8.8
+republic of serbia,indie rock,svet se menja,proto tip,6
 slovakia,indie rock,smazka,pipesh,7.7
 slovenia,indie rock,umazane misli,joker out,7.5
 slovenia,indie rock,omni,before time,7
@@ -166,6 +172,7 @@ switzerland,alt rock,new in colors,favez,9
 switzerland,alt rock,headed for the ocean,favez,8.8
 switzerland,alt rock,chasing honesty,favez,7
 taiwan,alt rock,爛泥,no party for cao dong,8.5
+taiwan,alt rock,da feng chui,no party for cao dong,9
 thailand,pop/indie rock(?),get up,kiki,7
 thailand,indie rock,let me go,yonlapa,8
 thailand,indie rock,i'm just like that,yonlapa,7.8
@@ -177,7 +184,7 @@ turkey,alt rock,dünyanın sonuna doğmuşum,maNga,7.7
 turkey,alt rock,cambaz,mor ve ötesi,8.7
 ukraine,indie rock,Я кусаю щоки,the unsleeping,8
 ukraine,indie rock,Не Сплю,the unsleeping,7.8
-usa,folk rock,soft stud,black belt eagle scout,7.5
+United States of America,folk rock,soft stud,black belt eagle scout,7.5
 uruguay,rock,upside down,astroboy,7.5
 uzbekistan,indie rock,Нам не нужны друзья,wladek sheen,7
 venezuela,sifri rock,retroceder,los mesoneros,6.5
