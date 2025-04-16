@@ -29,7 +29,10 @@ async function createChoropleth(data) {
     width = window.innerWidth * .8,
     height = window.innerHeight;
 
+
     // Rollup necessary data
+    const exceptions = new Set(["of", "the", "and", "in", "on", "at", "for"]); // Words 
+
     const countryStats = d3.rollup(
         data,
         v => ({
@@ -38,8 +41,11 @@ async function createChoropleth(data) {
         }),
         d => d.country
             .split(' ')                    // Split the country name into words
-            .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())  // Capitalize each word
-            .join(' ')                     // Rejoin the words into a single string
+            .map(word =>
+                 exceptions.has(word.toLowerCase()) 
+                ? word.toLowerCase()  // Keep it lowercase if it's in the exceptions list
+                : word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
+            .join(' ')                    
     );
 
     // Tooltip setup
