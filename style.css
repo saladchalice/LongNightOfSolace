@@ -9,6 +9,7 @@ html, body{
     padding: 0;
     box-sizing: border-box;
     overflow-x: hidden;
+    overflow-y: hidden;
     display: flex;
     height:100%;
 
@@ -46,6 +47,10 @@ h1, h2, h3, h4, h5, h6{
     padding: 0px;
     margin-top:auto;
 }   
+
+#lnos-chart {
+    overflow-x:hidden;
+}
 
 .hover{
     cursor: pointer;

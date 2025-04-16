@@ -43,7 +43,7 @@ async function createChoropleth(data) {
     );
 
     // Tooltip setup
-    const tooltip = d3.select("body").append("div")
+    const tooltip = d3.select("#lnos-chart").append("div")
         .attr("class", "tooltip")
         .style("opacity", 0)
         .style("position", "absolute")
